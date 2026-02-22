@@ -1,63 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="24dp">
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:background="@color/dark_gray"
-        android:layout_marginBottom="30dp"/>
-
-    <EditText
-        android:id="@+id/etUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Usuario"
-        android:textColorHint="@color/neon_blue"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/neon_blue"
-        android:padding="12dp"/>
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@android:drawable/ic_menu_gallery"
+        app:tint="@color/neon_blue"
+        android:layout_marginBottom="40dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Correo Electrónico"
         android:textColorHint="@color/neon_blue"
-        app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/neon_blue"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+        app:boxStrokeColor="@color/neon_blue"
+        app:hintTextColor="@color/neon_blue">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Contraseña"
+        android:textColorHint="@color/neon_blue"
+        app:boxStrokeColor="@color/neon_blue"
+        app:hintTextColor="@color/neon_blue"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/neon_blue">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Contraseña"
             android:inputType="textPassword"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/neon_blue"/>
+            android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¿Olvidaste tu contraseña?"
-        android:textColor="@color/neon_blue"
-        android:layout_marginTop="10dp"
-        android:textSize="12sp"
-        android:layout_gravity="end"/>
-
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnIngresar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ingresar"
-        android:backgroundTint="@color/neon_blue"
+        android:layout_height="60dp"
+        android:text="INGRESAR"
+        android:layout_marginTop="32dp"
+        app:backgroundTint="@color/neon_blue"
         android:textColor="@color/black"
-        android:layout_marginTop="30dp"
-        android:textStyle="bold"/>
-
+        android:textStyle="bold" />
 </LinearLayout>

@@ -1,23 +1,24 @@
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     app:cardBackgroundColor="@color/dark_gray"
     app:cardCornerRadius="12dp"
-    app:cardElevation="8dp">
+    app:strokeColor="@color/neon_blue"
+    app:strokeWidth="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="12dp">
 
         <TextView
-            android:id="@+id/tvTitulo"
+            android:id="@+id/tvPeliculaTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jeepers Creepers - Terror"
             android:textColor="@color/neon_blue"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -32,26 +33,26 @@
                 android:id="@+id/ivPoster"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:scaleType="centerCrop"
-                android:src="@android:drawable/ic_menu_gallery" />
+                android:scaleType="centerCrop" />
 
             <TextView
                 android:id="@+id/tvDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="Descripción de la película aquí..."
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:maxLines="5"/>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnVer"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVerTrailer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:text="Ver"
-            android:backgroundTint="@color/neon_blue"
+            android:text="VER"
+            app:backgroundTint="@color/neon_blue"
             android:textColor="@color/black" />
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>
